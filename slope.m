@@ -1,4 +1,4 @@
-function [ Delta_y ] = Error_Slope( Eror,H ,Grid)
+function [ Delta_y ] = slope( Error_2,H ,Grid)
 e = zeros(1,1);
 delta_e=zeros(1,1);
 Delta_y = zeros(1,1);
@@ -8,7 +8,7 @@ for jj=1:Grid-1
 end
 for i=1:4
     for j=1:Grid-2
-        e(i,j)=(Eror(i,j+1)/Eror(i,j));
+        e(i,j)=(Error_2(i,j+1)/Error_2(i,j));
 
     end
 
